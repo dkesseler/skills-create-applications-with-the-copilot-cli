@@ -143,7 +143,7 @@ function main() {
   if (args.length === 2 && args[0] === 'sqrt') {
     const n = Number(args[1]);
 
-    if (Number.isNaN(n)) {
+    if (args[1].trim() === '' || Number.isNaN(n)) {
       console.error('Error: operand must be a valid number.');
       process.exit(1);
     }
